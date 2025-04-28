@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Header from '../components/Header';
 
 function LoginView() {
     let [email, setEmail] = useState("");
@@ -12,18 +13,16 @@ function LoginView() {
     }
 
     return (
-        <div>
             <div>
                 <h1>Login</h1>
-                <form onSubmit={(e) => {e.preventDefault();navigate("/");}}>
+                <form onSubmit={(e) => { e.preventDefault(); navigate("/"); } }>
                     <div>
                         <label htmlFor="email">
                             Email
                         </label>
                         <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)}
                             placeholder="Enter your email"
-                            required
-                        />
+                            required />
                     </div>
                     <div>
                         <label htmlFor="password">
@@ -31,19 +30,17 @@ function LoginView() {
                         </label>
                         <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)}
                             placeholder="Enter your password"
-                            required
-                        />
+                            required />
                     </div>
                     <button type="submit">
                         Login
                     </button>
                 </form>
                 <p> Don't have an account? <span onClick={() => navigate("/register")}>
-                        Register here 
-                    </span>
+                    Register here
+                </span>
                 </p>
             </div>
-        </div>
     );
 }
 

@@ -1,14 +1,15 @@
-import { Link } from "react-router-dom";
 import "./HomeView.css";
-import Menu from "../components/Menu";
+import Header from "../components/Header";
 
 function HomeView() {
   return (
-    <div>
-      <Menu />
-      <h1>Home</h1>
-    </div>
-  );
+    <>
+      <Header />
+      <div>
+        <h1>Home</h1>
+      </div>
+    </>
+        ); 
 }
 
-export default HomeView;
+      export default HomeView;

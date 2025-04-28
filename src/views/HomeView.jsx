@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./HomeView.css";
-import Menu from "../../components/Menu";
+import Menu from "../components/Menu";
 
 function HomeView() {
   return (

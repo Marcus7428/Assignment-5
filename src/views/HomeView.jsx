@@ -1,5 +1,6 @@
 import "./HomeView.css";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 function HomeView() {
   return (
@@ -8,6 +9,7 @@ function HomeView() {
       <div>
         <h1>Home</h1>
       </div>
+      <Footer />
     </>
         ); 
 }

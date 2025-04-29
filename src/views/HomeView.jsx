@@ -8,10 +8,11 @@ function HomeView() {
       <Header />
       <div>
         <h1>Home</h1>
+        <div className="home-container"></div>
       </div>
       <Footer />
     </>
-        ); 
+  );
 }
 
-      export default HomeView;
+export default HomeView;

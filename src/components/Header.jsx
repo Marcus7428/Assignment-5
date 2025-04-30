@@ -8,10 +8,11 @@ function Header() {
     return (
         <div>
             <div className="navBar">
-                <h1 className="navTitle">WebFlicks</h1>
-                <button className="moviesLink" onClick={() => navigate("/movies")}>Movies View</button>
-                <button className="LoginButton" onClick={() => navigate("/login")}>Login</button>
-                <button className="RegisterButton" onClick={() => navigate("/register")}>Register</button>
+                <h1 className="navTitle" onClick={() => navigate("/")}>WebFlicks</h1>
+                <div className="buttonGroup">
+                    <button className="LoginButton" onClick={() => navigate("/login")}>Login</button>
+                    <button className="RegisterButton" onClick={() => navigate("/register")}>Register</button>
+                </div>
             </div>
         </div>
     );

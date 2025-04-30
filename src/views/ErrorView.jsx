@@ -1,7 +1,11 @@
+import "./ErrorView.css";
+
 function ErrorView() {
     return (
-        <h1>Error... Page does not exist!</h1>
-    )
+        <div className="error-container">
+            <h1 className="error-title">Sorry, this page does not exist (yet)!</h1>
+        </div>
+    );
 }
 
 export default ErrorView;

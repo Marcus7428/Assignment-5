@@ -1,38 +1,73 @@
-.movies-container {
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .movies-title {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  .movies-nav {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 20px;
-  }
-  
-  .nav-link {
-    text-decoration: none;
-    color: #333;
-    font-size: 1.2rem;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .nav-link:hover {
-    background-color: #ddd;
-  }
-  
-  .movies-content {
-    padding: 20px;
-    border-top: 2px solid #ccc;
-  }
-  
-  a.active {
-    color: red;
-  }
+.movies-view-container {
+  display: flex;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  color: white;
+}
+
+.genres-sidebar {
+  width: 100%;
+  padding: 20px;
+  background-color: #2c2c2c;
+  border-right: 2px solid #4f6cff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.genres-title {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.genres-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.genre-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #4f6cff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.genre-button:hover {
+  background-color: #3e58e7;
+}
+
+.genre-button.selected {
+  background-color: #ff4c4c;
+}
+
+.movies-main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #f5f5f5;
+}
+
+.movies-main-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.movies-main-content p {
+  font-size: 1rem;
+  line-height: 1.5;
+}

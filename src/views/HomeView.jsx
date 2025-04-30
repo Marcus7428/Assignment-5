@@ -1,15 +1,15 @@
 import "./HomeView.css";
 import Header from "../components/Header";
+import Hero from "../components/Hero";
+import Feature from "../components/Feature";
 import Footer from "../components/Footer";
 
 function HomeView() {
   return (
     <>
       <Header />
-      <div>
-        <h1>Home</h1>
-        <div className="home-container"></div>
-      </div>
+      <Hero/>
+      <Feature/>
       <Footer />
     </>
   );

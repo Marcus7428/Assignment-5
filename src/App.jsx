@@ -1,25 +1,27 @@
-import { Outlet } from "react-router-dom";
-import Genres from "./components/Genres.jsx";
-import Header from "./components/Header.jsx";
-import Footer from "./components/Footer.jsx";
-import MovieView from "./MoviesView.jsx";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomeView from "./views/HomeView";
+import MoviesView from "./views/MoviesView";
+import MovieDetailView from "./views/MovieDetailView";
+import GenreView from "./views/GenreView";
+import LoginView from "./views/LoginView";
+import RegisterView from "./views/RegisterView";
+import ErrorView from "./views/ErrorView";
 
-function MoviesView() {
+function App() {
     return (
-        <>
-            <Header /> {/* Header is rendered here */}
-            <div className="movies-view-container">
-                <aside className="genres-sidebar">
-                    <h1 className="genres-title">Genres:</h1>
-                    <Genres />
-                </aside>
-                <main className="movies-main-content">
-                    <Outlet /> {/* Nested routes like GenreView or MovieDetailView will render here */}
-                </main>
-            </div>
-            <Footer />
-        </>
+        <Router>
+            <Routes>
+                <Route path="/" element={<HomeView />} />
+                <Route path="/movies" element={<MoviesView />}>
+                    <Route path="details/:id" element={<MovieDetailView />} />
+                    <Route path=":genre_id" element={<GenreView />} />
+                </Route>
+                <Route path="/login" element={<LoginView />} />
+                <Route path="/register" element={<RegisterView />} />
+                <Route path="*" element={<ErrorView />} />
+            </Routes>
+        </Router>
     );
 }
 
-export default MoviesView;
+export default App;

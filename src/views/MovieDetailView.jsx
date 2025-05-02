@@ -47,7 +47,6 @@ function MovieDetailView() {
 
     return (
         <>
-            <Header />
             <div className="movie-detail-container">
                 <h1 className="movie-title">{movie.title}</h1>
                 <img
@@ -70,7 +69,6 @@ function MovieDetailView() {
                             height="400"
                             src={trailer}
                             title="Movie Trailer"
-                            frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen
                         ></iframe>

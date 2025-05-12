@@ -47,11 +47,7 @@ function GenreView() {
                 {movies.map((movie) => (
                     <Link to={`/movies/details/${movie.id}`} key={movie.id} className="movie-card-link">
                         <div className="movie-card">
-                            <img
-                                src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
-                                alt={movie.title}
-                                className="movie-poster"
-                            />
+                            <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={movie.title} className="movie-poster"/>
                             <h3 className="movie-title">{movie.title}</h3>
                         </div>
                     </Link>

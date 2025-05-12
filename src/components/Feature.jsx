@@ -22,11 +22,7 @@ function Feature() {
             <div className="movieGrid">
                 {movies.map((movie) => (
                     <div key={movie.id} className="movieCard">
-                        <img
-                            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                            alt={movie.title}
-                            className="moviePoster"
-                        />
+                        <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} className="moviePoster"/>
                         <h3 className="movieTitle">{movie.title}</h3>
                     </div>
                 ))}

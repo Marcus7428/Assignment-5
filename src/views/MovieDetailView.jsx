@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import Header from "../components/Header"; 
 import "./MovieDetailView.css";
 
 function MovieDetailView() {
@@ -13,26 +12,10 @@ function MovieDetailView() {
         async function fetchMovieDetails() {
             try {
                 const movieResponse = await axios.get(
-                    `https://api.themoviedb.org/3/movie/${id}`,
-                    {
-                        params: {
-                            api_key: import.meta.env.VITE_TMDB_KEY,
-                        },
-                    }
+                    `https://api.themoviedb.org/3/movie/${id}?api_key=${import.meta.env.VITE_TMDB_KEY}`
                 );
                 setMovie(movieResponse.data);
-
-                const trailerResponse = await axios.get(
-                    `https://api.themoviedb.org/3/movie/${id}/videos`,
-                    {
-                        params: {
-                            api_key: import.meta.env.VITE_TMDB_KEY,
-                        },
-                    }
-                );
-                const trailerData = trailerResponse.data.results.find(
-                    (video) => video.type === "Trailer" && video.site === "YouTube"
-                );
+                const trailer = movie.videos.results.find((video) => video.type === "Trailer" && video.site === "YouTube");
                 setTrailer(trailerData ? `https://www.youtube.com/embed/${trailerData.key}` : null);
             } catch (error) {
                 console.error("Error fetching movie details or trailer:", error);

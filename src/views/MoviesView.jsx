@@ -10,7 +10,7 @@ function MoviesView() {
             <Header />
             <div className="movies-view-container">
                 <aside className="genres-sidebar">
-                    <h1 className="genres-title">Genres:</h1>
+                    <h1 className="genres-title">Genres</h1>
                     <Genres />
                 </aside>
                 <main className="movies-main-content">
